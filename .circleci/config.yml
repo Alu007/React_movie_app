@@ -56,7 +56,7 @@ jobs:
               if ["${CIRCLE_BRANCH}" == "master"]
               then 
                 aws --region ${AWS_REGION} s3 sync ~/project/build s3//${AWS_PROD_BUCKET} --delete
-              elif ["${CIRCLE_BRANCH"} == "staging"]
+              elif ["${CIRCLE_BRANCH}" == "staging"]
               then 
                 aws --region ${AWS_REGION} s3 sync ~/project/build s3//${AWS_STAGING_BUCKET} --delete
               else 
@@ -95,7 +95,7 @@ jobs:
                 aws cloudfront create-invalidation --distribution-id ${PROD_CFD_ID} --paths /\*
                 aws --region ${AWS_REGION} s3 sync ~/project/build s3//${AWS_PROD_BUCKET} --delete
 
-              elif ["${CIRCLE_BRANCH" == "staging"]
+              elif ["${CIRCLE_BRANCH}" == "staging"]
               then 
                 aws cloudfront create-invalidation --distribution-id ${STAGING_CFD_ID} --paths /\*
                 aws --region ${AWS_REGION} s3 sync ~/project/build s3//${AWS_STAGING_BUCKET} --delete
