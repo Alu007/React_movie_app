@@ -36,11 +36,11 @@ jobs:
           name: show current
           command: echo ${CIRCLE_BRANCH}
       - run:
-          name: installing aws cli
+          name: installing AWS CLI
           working_directory: /
           command: |
             sudo apt-get -y -qq update
-            sudo apt-get -y awscli
+            sudo apt-get -y AWS CLI
             sudo apt-get -y python-pip python-dev build-essential
       - run:
           name: build 
@@ -72,11 +72,11 @@ jobs:
           name: show current
           command: echo ${CIRCLE_BRANCH}
       - run:
-          name: installing aws cli
+          name: installing AWS CLI
           working_directory: /
           command: |
             sudo apt-get -y -qq update
-            sudo apt-get -y awscli
+            sudo apt-get -y AWS CLI
             sudo apt-get -y python-pip python-dev build-essential
       - run:
           name: build 
