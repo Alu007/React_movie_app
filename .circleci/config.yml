@@ -142,7 +142,7 @@ workflows:
     
       - deploy-to-aws-s3:
           requires:
-            - publish-to-docker-hub
+            - prettier
           filters:
             branches:
               only:
